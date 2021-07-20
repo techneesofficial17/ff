@@ -1,0 +1,222 @@
+.home {
+    display: flex;
+    background: url('.././images/bg/3.jpg') rgba($color: #000000, $alpha: 0.4) center/cover no-repeat;
+    background-blend-mode: darken;
+    height: calc(100vh - 10vh);
+    .left {
+        width: 50%;
+        // background: red;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        .left-box {
+            h2 {
+                font-size: 45px;
+                font-family: 'Nunito';
+                color: white;
+                font-weight: 900;
+                text-transform: uppercase;
+            }
+            height: 50%;
+            text-align: center;
+            img {
+                width: 40%;
+                border: 2px solid black;
+                border-radius: 10px;
+                cursor: pointer;
+                &:hover {
+                    border: 2px solid #ffba00;
+                }
+            }
+            img:nth-child(1) {
+                margin-right: 25px;
+            }
+            // background: blue;
+        }
+    }
+    .right {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50%;
+        // background: limegreen;
+        .box {
+            h3 {
+                font-size: 30px;
+                text-transform: uppercase;
+                font-family: Helvetica, sans-serif;
+                margin-bottom: 10px;
+            }
+            text-align: center;
+            background: #002327;
+            border: 2px solid rgba(255,
+            255,
+            255,
+            0.678);
+            padding: 20px;
+            color: white;
+            iframe {
+                border: 2px solid rgba(255, 255, 255, 0.726);
+            }
+        }
+    }
+}
+
+.login {
+    height: 110vh;
+    // background: url('.././images/bg/9.jpg') rgba($color: #000000, $alpha: 0.7) center/cover no-repeat;
+    background: #ffc72e;
+    background-blend-mode: darken;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .login-container {
+        h2 {
+            font-family: 'Ubuntu';
+            margin-bottom: 40px;
+            padding: 3px 10px;
+            border-bottom: 2px solid #000;
+        }
+        background: #ecad00;
+        padding: 20px;
+        .login-div {
+            font-family: 'Nunito';
+            background: white;
+            padding: 30px 30px;
+            .input-field {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                margin-bottom: 20px;
+                label {
+                    font-weight: 600;
+                    text-align: center;
+                    margin-bottom: 5px;
+                }
+                input {
+                    width: 100%;
+                    padding: 3px 10px;
+                }
+                input[type='submit'] {
+                    color: white;
+                    background: black;
+                    border: none;
+                    cursor: pointer;
+                    outline: none;
+                    padding: 6px 0px;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                    font-weight: 600;
+                    border: 2px solid black;
+                    &:hover {
+                        border: 2px solid #ffba00;
+                    }
+                }
+            }
+            .login-with {
+                .type {
+                    a {
+                        background: red;
+                        margin: 10px auto;
+                        display: flex;
+                        align-items: center;
+                        justify-content: flex-start;
+                        padding: 5px 10px;
+                        cursor: pointer;
+                        color: white;
+                        span {
+                            font-family: Helvetica;
+                            text-transform: uppercase;
+                            font-size: 16px;
+                            letter-spacing: 0;
+                        }
+                        i {
+                            font-size: 20px;
+                            margin-right: 10px;
+                        }
+                    }
+                }
+                .type:nth-child(1) {
+                    background: #1773ea;
+                }
+                .type:nth-child(2) {
+                    background: #ea4335;
+                }
+            }
+        }
+        .extra-links {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            a {
+                font-size: 12px;
+                color: #1773ea;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1150px) {
+    .home {
+        flex-direction: column;
+        .left {
+            width: 100%;
+            margin: 0 auto;
+            height: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .left-box {
+                h2 {
+                    font-size: 25px;
+                    font-family: Arial, Helvetica, sans-serif;
+                    color: #ffc72e;
+                    font-weight: 900;
+                    text-transform: uppercase;
+                    padding: 5px 10px;
+                }
+                height: 50%;
+                text-align: center;
+                img {
+                    margin: 0 auto;
+                    width: 80%;
+                    border: 2px solid black;
+                    border-radius: 10px;
+                    cursor: pointer;
+                }
+                img:nth-child(1) {
+                    margin-right: 0;
+                }
+            }
+        }
+        .right {
+            height: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            margin: auto 0;
+            .box {
+                h3 {
+                    display: none;
+                    font-size: 16px;
+                    text-transform: uppercase;
+                    font-family: Helvetica, sans-serif;
+                    margin-bottom: 10px;
+                }
+                text-align: center;
+                background: none;
+                border: none;
+                padding: 20px;
+                color: white;
+                iframe {
+                    width: 310px;
+                    height: 180px;
+                    border: none;
+                    border: 2px solid rgb(255, 187, 0);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,105 @@
+@import '../styles.inc/fonts';
+@import '../styles.inc/mixins';
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    border-bottom: 2px solid rgba($color: #ffffff, $alpha: 0.3);
+    height: 10vh;
+    background: #303030;
+    display: flex;
+    .left-logo {
+        width: 40%;
+        display: flex;
+        a {
+            img {
+                width: 30%;
+                margin-left: calc(100vw - 85vw);
+            }
+        }
+    }
+    .right-nav {
+        .bar {
+            display: none;
+        }
+        width: 60%;
+        height: 100%;
+        ul {
+            height: inherit;
+            @include flex(row, space-evenly);
+            li {
+                list-style: none;
+                a {
+                    text-decoration: none;
+                    font-size: 17px;
+                    color: white;
+                    font-family: Helvetica, sans-serif;
+                    font-weight: 600;
+                    text-transform: uppercase;
+                    border-bottom: 2px solid #fff;
+                    transition: all 0.1s ease-in;
+                    &:hover {
+                        border-color: #ffba00;
+                        color: #ffba00;
+                        font-weight: 600;
+                        border-top: 2px solid white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1150px) {
+    nav {
+        position: sticky;
+        top: 0;
+        .left-logo {
+            a {
+                img {
+                    width: 110%;
+                }
+            }
+        }
+        .right-nav {
+            .bar {
+                margin-left: 50px;
+                color: white;
+                font-size: 34px;
+                display: block;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            ul {
+                transition: transform 0.3s ease-in;
+                border-left: 2px solid black;
+                border-bottom: 2px solid black;
+                width: 70%;
+                position: fixed;
+                background: #333;
+                flex-direction: column;
+                height: calc(100vh - 10vh);
+                top: 10vh;
+                bottom: 0;
+                right: 0;
+                li {
+                    a {
+                        display: block;
+                        background: black;
+                        padding: 5px 20px;
+                        width: 200px;
+                        text-align: center;
+                    }
+                }
+            }
+            .navToggle {
+                transform: translateX(100%);
+            }
+        }
+    }
+}

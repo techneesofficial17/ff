@@ -1,0 +1,17 @@
+#facebook {
+    background: white;
+    height: 80vh;
+    display: flex;
+    width: 100%;
+    .leftFb {
+        background: red;
+        height: inherit;
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .rightFb {
+        width: 50%;
+    }
+}
